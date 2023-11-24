@@ -1,33 +1,45 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #f2f2f2;
-    padding: 10px;
+.main-container {
+    background-image: url("background1.jpg");
+    height: 100%;
+    background-size: conver;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+}
+
+.navbar {   
+    display: flex;
+    justify-content: center;
+    background-color: #CCCCCC;
+    overflow: hidden;
+    height: 7%;
+}
+
+.navbar a {
+    color: black;
     text-align: center;
+    padding: 14px 16px;
+    font-size: 25px;
+    text-decoration: none;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.navbar img {  
+    width: auto;
+    height: 100%;
 }
 
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+.footer {
+    background-color: #CCCCCC;
     padding: 10px;
 }
