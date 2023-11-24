@@ -13,6 +13,7 @@ body, html {
     background-repeat: no-repeat;
 }
 
+/* Navbar */
 .navbar {   
     display: flex;
     justify-content: center;
@@ -37,11 +38,31 @@ body, html {
     width: auto;
     height: 100%;
 }
+/* Footer */
 
-.footer {
-    width: 100%;
-    text-align: center;
-    height: 4%;
+.social-footer {
+    height: 10px;
+    padding: 1rem;
+    background: #8a8a8a;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+
+.social {
+    color: white;
+    text-decoration: none;
+}
+
+.social:hover {
+    color: #4a4a4a;
 }
 
 /* Menu styles */

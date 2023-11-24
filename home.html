@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Coffee Shop</title>
         <link rel="stylesheet" href="styles.css">
+        <!-- icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="script.js"></script>
     </head>
     <body>
@@ -12,56 +14,41 @@
             <div class="navbar">
                 <a href="#home">Home</a>
                 <a href="#menu">Menu</a>
-                <a href="#gallery">Gallery</a>
                 <img src="pics/logo.png" alt="coffeeshop-logo">
+                <a href="#gallery">Gallery</a>
                 <a href="#reservation">Reservation</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
             </div>
         </div>
+
         <div id="menu">
-
+            <!-- Fatemeh -->
         </div>
-        <div id="gallery" class="slide-show">
-            <div class="mySlides">
-                <div class="numbertext">1 / 5</div>
-                <img src="pics/g1.jpg" style="width:100%">
-            </div>
-          
-            <div class="mySlides">
-                <div class="numbertext">2 / 5</div>
-                <img src="pics/g2.jpg" style="width:100%">
-            </div>
-          
-            <div class="mySlides">
-                <div class="numbertext">3 / 5</div>
-                <img src="pics/g3.jpg" style="width:100%">
-            </div>
 
-            <div class="mySlides">
-                <div class="numbertext">4 / 5</div>
-                <img src="pics/g4.jpg" style="width:100%">
-            </div>
+        <div id="gallery">
+            <img class="mySlides" src="pics/g1.jpg" style="width:70%">
+            <img class="mySlides" src="pics/g2.jpg" style="width:70%">
+            <img class="mySlides" src="pics/g3.jpg" style="width:70%">
+            <img class="mySlides" src="pics/g4.jpg" style="width:70%">
+            <img class="mySlides" src="pics/g5.jpg" style="width:70%">
+          
+            <button onclick="plusDivs(-1)">&#10094;</button>
+            <button onclick="plusDivs(1)">&#10095;</button>
+          </div>
 
-            <div class="mySlides">
-                <div class="numbertext">5 / 5</div>
-                <img src="pics/g5.jpg" style="width:100%">
-            </div>
-              
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
         <div id="reservation">
-
+            <!-- Hana -->
         </div>
-        <div id="about">
-
-        </div>
-        <div id="contact">
-
-        </div>
-        <footer class="footer">
-            <p>&copy; 2023 Coffee Shop</p>
-        </footer>
+            
+        <!-- TODO‌ edit this one -->
+        <footer class="social-footer">
+            <div class="social-footer-left">
+                <p>&copy; 2023 Coffee Shop</p>
+            </div>
+            <div class="social-footer-icons">
+                <a href="#" class="fa fa-facebook social"></a>
+                <a href="#" class="fa fa-instagram social"></a>
+                <a href="#" class="fa fa-telegram social"></a>
+            </div>
+        </footer>     
     </body>
 </html>
