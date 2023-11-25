@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservation</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="reservatioin.js"></script>
+    </head>
+    <body>
+        <div class="main-container" id="reservation">
+            <div class="navbar">
+                <a href="home.html">Home</a>
+                <a href="#menu">Menu</a>
+                <img src="pics/logo.png" alt="coffeeshop-logo">
+                <a href="#gallery">Gallery</a>
+                <a href="reservation.html">Reservation</a>
+            </div>
+            <div class="box">
+                <div style="text-align: center;" class="title">Table Reservation</div>
+                <div class="selects">
+                       <div class="input-group">
+                           <div class="input-group-prepend">
+                               <span class="input-group-text">
+                                   <svg class="svg-icon-persons">
+                                       <use xlink:href="#icon-persons">
+                                       </use>
+                                   </svg>
+                               </span>
+                           </div>
+                           <div>
+                               <select tabindex="1" class="select-container">
+                                   <option value="0: 0">Number of people</option>
+                                   <option  value="1: 2">2 persons</option>
+                                   <option  value="2: 3">3 persons</option>
+                                   <option  value="3: 4">4 persons</option>
+                                   <option  value="4: 5">5 persons</option>
+                                   <option  value="5: 6">6 persons</option>
+                                   <option  value="6: 7">7 persons</option>
+                                   <option  value="7: 8">8 persons</option>
+                               </select>
+                           </div>
+                           <div onload="getToday(), generateTime()">
+                               <input type="date" class="select-container" id="date" oninput="generateTime()"/>
+                           </div>
+                           <div>
+                                <select id="time" class="select-container">
+                                    <option value="0:0">Time</option> 
+                                </select>
+                           </div>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
