@@ -38,27 +38,25 @@ body, html {
     width: auto;
     height: 100%;
 }
+
 /* Footer */
+footer {
+    background-color: #666363;
+    padding-top: 8px;
+    padding-bottom: 1px;
+    text-align: center;
+}
 
-.social-footer {
-    height: 10px;
-    padding: 1rem;
-    background: #8a8a8a;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  
+.social-icons {
+    display: inline-block;
+    margin-bottom: 1px;
+}
 
-.social {
+.social-icons a {
     color: white;
     text-decoration: none;
+    font-size: 24px;
+    margin: 0 5px;
 }
 
 .social:hover {
