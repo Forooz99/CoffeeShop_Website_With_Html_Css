@@ -1,8 +1,10 @@
-window.onload = function etToday() {
+window.onload = function getToday() {
     var today = new Date().toISOString().split('T')[0];
     document.getElementById("date").setAttribute("min", today);
     document.getElementById("date").setAttribute("value", today);
 }
+
+
 
 function generateTime() {
     var dateInput = document.getElementById("date");

@@ -18,38 +18,56 @@
                 <a href="reservation.html">Reservation</a>
             </div>
             <div class="box">
-                <div style="text-align: center;" class="title">Table Reservation</div>
-                <div class="selects">
-                       <div class="input-group">
-                           <div class="input-group-prepend">
-                               <span class="input-group-text">
-                                   <svg class="svg-icon-persons">
-                                       <use xlink:href="#icon-persons">
-                                       </use>
-                                   </svg>
-                               </span>
-                           </div>
-                           <div>
-                               <select tabindex="1" class="select-container">
-                                   <option value="0: 0">Number of people</option>
-                                   <option  value="1: 2">2 persons</option>
-                                   <option  value="2: 3">3 persons</option>
-                                   <option  value="3: 4">4 persons</option>
-                                   <option  value="4: 5">5 persons</option>
-                                   <option  value="5: 6">6 persons</option>
-                                   <option  value="6: 7">7 persons</option>
-                                   <option  value="7: 8">8 persons</option>
-                               </select>
-                           </div>
-                           <div onload="getToday(), generateTime()">
-                               <input type="date" class="select-container" id="date" oninput="generateTime()"/>
-                           </div>
-                           <div>
-                                <select id="time" class="select-container">
-                                    <option value="0:0">Time</option> 
-                                </select>
-                           </div>
-                       </div>
+                <div style="text-align: center;" class="title">Table Reservation</div>    
+                <div class="inputs" style="align-content: center;">
+                    <div>
+                        <span class="inputs-addon">
+                            <i class="fa fa-user" style="color: #898989;"></i>
+                        </span>
+                        <input type="text" class="input-container"  id="first-name" placeholder="First Name*"> 
+                        <input type="text" class="input-container"  id="last-name" placeholder="Last Name*">
+                    </div>
+                    <div>
+                        <span class="inputs-addon">
+                            <i class="fa fa-phone" style="color: #898989;"></i>
+                        </span>
+                        <input type="tel" class="input-container" id="telephone" placeholder="Telephone*">
+                    </div>
+                    <div>     
+                        <span class="inputs-addon">
+                            <i class="fa fa-envelope-o fa-fw" style="color: #898989";></i>
+                        </span>
+                        <input type="email" class="input-container" id="email" placeholder="Email*">
+                    </div>
+                    <div>
+                        <span class="inputs-addon">
+                            <i class="fa fa-users" style="color: #898989;"></i>
+                        </span>
+                        <select class="input-container" style="width: 320px;">
+                            <option value="0: 0">Number of people</option>
+                            <option  value="1: 2">2 persons</option>
+                            <option  value="2: 3">3 persons</option>
+                            <option  value="3: 4">4 persons</option>
+                            <option  value="4: 5">5 persons</option>
+                            <option  value="5: 6">6 persons</option>
+                            <option  value="6: 7">7 persons</option>
+                            <option  value="7: 8">8 persons</option>
+                        </select>
+                    </div>
+                    <div onload="getToday(), generateTime()">
+                        <span class="inputs-addon">
+                            <i class="fa fa-calendar" style="color: #898989;"></i>
+                        </span>
+                        <input type="date" class="input-container" id="date" oninput="generateTime()"/>
+                    </div>
+                    <div>
+                        <span class="inputs-addon">
+                            <i class="fa fa-clock"  style="color: #898989;"></i>
+                        </span>
+                        <select id="time" class="input-container" style="width: 320px;">
+                            <option value="0:0">Time</option> 
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
