@@ -256,20 +256,20 @@ footer {
     margin: 5px;
     margin-left: 0%;
     vertical-align: middle;
-  }
-  
- #last-name {
+}
+
+#lastname {
     width: 138px;
     margin-right: 0;
- }
- 
- #first-name {
+}
+
+#firstname {
     width: 138px;
     border-radius : 0; 
     margin-right: 0%;
- }
-  
-  .inputs-addon {
+}
+
+.inputs-addon {
     font-family: sspReg;
     background-color: #e2e0e0;
     border: 1px solid #ccc;
@@ -280,26 +280,45 @@ footer {
     margin: 5px;
     margin-right: 0%;
     vertical-align: middle;
-  }
-  
-  .inputs-addon i {
+}
+
+.inputs-addon i {
     width: 12px;
     height: 12px;
-  }
+}
 
 .box {
+    position: relative;
     align-items: top;
     font-family: sspReg;
     background-color: #f6f3f3;
     padding: 10px;
-    width: 600px;
+    width: 400px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 40px;
     border-radius: 6px;
+    height: 400px;
 }
 
 .title {
     font-family: sspBold;
+    margin-bottom: 10px;
+}
+
+#nextButton {
+    margin-top: 10px;
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    font-family: sspReg;
+    background-color: #b7b5b5;
+    border: 1px solid #989797;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100px;
+}
+#nextButton:hover {
+    background-color: #a3a2a2;
 }
 
 @font-face {

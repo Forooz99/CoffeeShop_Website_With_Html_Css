@@ -24,8 +24,8 @@
                         <span class="inputs-addon">
                             <i class="fa fa-user" style="color: #898989;"></i>
                         </span>
-                        <input type="text" class="input-container"  id="first-name" placeholder="First Name*"> 
-                        <input type="text" class="input-container"  id="last-name" placeholder="Last Name*">
+                        <input type="text" class="input-container"  id="firstname" placeholder="First Name*"> 
+                        <input type="text" class="input-container"  id="lastname" placeholder="Last Name*">
                     </div>
                     <div>
                         <span class="inputs-addon">
@@ -43,15 +43,16 @@
                         <span class="inputs-addon">
                             <i class="fa fa-users" style="color: #898989;"></i>
                         </span>
-                        <select class="input-container" style="width: 320px;">
-                            <option value="0: 0">Number of people</option>
-                            <option  value="1: 2">2 persons</option>
-                            <option  value="2: 3">3 persons</option>
-                            <option  value="3: 4">4 persons</option>
-                            <option  value="4: 5">5 persons</option>
-                            <option  value="5: 6">6 persons</option>
-                            <option  value="6: 7">7 persons</option>
-                            <option  value="7: 8">8 persons</option>
+                        <select class="input-container" id="numberOfPeople" style="width: 320px;">
+                            <option value="0">Number of people</option>
+                            <option  value="1">1 persons</option>
+                            <option  value="2">2 persons</option>
+                            <option  value="3">3 persons</option>
+                            <option  value="4">4 persons</option>
+                            <option  value="5">5 persons</option>
+                            <option  value="6">6 persons</option>
+                            <option  value="7">7 persons</option>
+                            <option  value="8">8 persons</option>
                         </select>
                     </div>
                     <div onload="getToday(), generateTime()">
@@ -69,6 +70,7 @@
                         </select>
                     </div>
                 </div>
+                <button id="nextButton" >Next</button>
             </div>
         </div>
         <footer>
