@@ -54,28 +54,72 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const nextButton = document.getElementById("nextButton");
-    nextButton.addEventListener('click', function() {
-        firstname = document.getElementById('firstname');
-        lastname = document.getElementById('lastname');
-        telephone = document.getElementById('telephone');
-        email = document.getElementById('email');
-        numerOfPeople =document.getElementById('numberOfPeople');
-        if (  firstname.value === null ||
-            firstname.value === '' ||
-            lastname.value === null ||
-            lastname.value === '' ||
-            email.value === null ||
-            email.value === '' ||
-            telephone.value === null ||
-            telephone.value === '' ||
-            numberOfPeople.value === '0'
-          ) 
-            {
-            alert('Please fill in all');
+    // const nextButton = document.getElementById("nextButton");
+    // nextButton.addEventListener('click', function() {
+    //     firstname = document.getElementById('firstname');
+    //     lastname = document.getElementById('lastname');
+    //     telephone = document.getElementById('telephone');
+    //     email = document.getElementById('email');
+    //     numerOfPeople =document.getElementById('numberOfPeople');
+    //     if (  firstname.value === null ||
+    //         firstname.value === '' ||
+    //         lastname.value === null ||
+    //         lastname.value === '' ||
+    //         email.value === null ||
+    //         email.value === '' ||
+    //         telephone.value === null ||
+    //         telephone.value === '' ||
+    //         numberOfPeople.value === '0'
+    //       ) 
+    //         {
+    //         alert('Please complete all required fields');
+    //         return;
+    //     }
+    // });
+});
+
+
+$(document).ready(function(){
+    $(".button").click(function(){
+      var button = $(this);
+      var currentSection = button.parents(".section");
+      var currentSectionIndex = currentSection.index();
+   
+
+      if(currentSectionIndex=== 1) {
+        firstname = $("#firstname").val();
+        lastname = $("#lastname").val();
+        telephone = $("#telephone").val();
+        email = $("#email").val();
+        numberOfPeople = $("#numberOfPeople").val();
+        console.log(numberOfPeople)
+        if (  firstname === null ||
+            firstname === '' ||
+            lastname === null ||
+            lastname === '' ||
+            email === null ||
+            email === '' ||
+            telephone === null ||
+            telephone === '' ||
+            numberOfPeople === '0'
+          ){
+            alert('Please complete all required fields');
             return;
         }
+        else{
+            currentSection.removeClass("is-active").next().addClass("is-active");  
+            $("#menuContainer").load("menu.html #main-menu-id");       
+        }
+      }
 
-        //add what happens when clicked
-        });
+      if(currentSectionIndex === 2){
+
+      }
+  
+      if(currentSectionIndex === 3){
+        $(document).find(".box .section").first().addClass("is-active");
+        $(document).find(".steps li").first().addClass("is-active");
+      }
     });
+  });
+
