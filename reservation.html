@@ -6,6 +6,7 @@
         <title>Reservation</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="scripts/reservatioin.js"></script>
     </head>
     <body>
@@ -19,59 +20,105 @@
             </div>
             <div class="box">
                 <div style="text-align: center;" class="title">Table Reservation</div>    
-                <div class="inputs" style="align-content: center;">
-                    <div>
-                        <span class="inputs-addon">
-                            <i class="fa fa-user" style="color: #898989;"></i>
-                        </span>
-                        <input type="text" class="input-container"  id="firstname" placeholder="First Name*"> 
-                        <input type="text" class="input-container"  id="lastname" placeholder="Last Name*">
+                <fieldset class="section is-active">
+                    <div class="inputs"  id="inputs">
+                        <div>
+                            <span class="inputs-addon">
+                                <i class="fa fa-user" style="color: #898989;"></i>
+                            </span>
+                            <input type="text" class="input-container"  id="firstname" placeholder="First Name*"> 
+                            <input type="text" class="input-container"  id="lastname" placeholder="Last Name*">
+                        </div>
+                        <div>
+                            <span class="inputs-addon">
+                                <i class="fa fa-phone" style="color: #898989;"></i>
+                            </span>
+                            <input type="tel" class="input-container" id="telephone" placeholder="Telephone*">
+                        </div>
+                        <div>     
+                            <span class="inputs-addon">
+                                <i class="fa fa-envelope-o fa-fw" style="color: #898989";></i>
+                            </span>
+                            <input type="email" class="input-container" id="email" placeholder="Email*">
+                        </div>
+                        <div>
+                            <span class="inputs-addon">
+                                <i class="fa fa-users" style="color: #898989;"></i>
+                            </span>
+                            <select class="input-container" id="numberOfPeople" style="width: 320px;">
+                                <option value="0">Number of people</option>
+                                <option  value="1">1 persons</option>
+                                <option  value="2">2 persons</option>
+                                <option  value="3">3 persons</option>
+                                <option  value="4">4 persons</option>
+                                <option  value="5">5 persons</option>
+                                <option  value="6">6 persons</option>
+                                <option  value="7">7 persons</option>
+                                <option  value="8">8 persons</option>
+                            </select>
+                        </div>
+                        <div onload="getToday(), generateTime()">
+                            <span class="inputs-addon">
+                                <i class="fa fa-calendar" style="color: #898989;"></i>
+                            </span>
+                            <input type="date" class="input-container" id="date" oninput="generateTime()"/>
+                        </div>
+                        <div>
+                            <span class="inputs-addon">
+                                <i class="fa fa-clock"  style="color: #898989;"></i>
+                            </span>
+                            <select id="time" class="input-container" style="width: 320px;">
+                                <option value="0:0">Time</option> 
+                            </select>
+                        </div>
                     </div>
                     <div>
-                        <span class="inputs-addon">
-                            <i class="fa fa-phone" style="color: #898989;"></i>
-                        </span>
-                        <input type="tel" class="input-container" id="telephone" placeholder="Telephone*">
+                    <button class="button" >Next</button>
                     </div>
-                    <div>     
-                        <span class="inputs-addon">
-                            <i class="fa fa-envelope-o fa-fw" style="color: #898989";></i>
-                        </span>
-                        <input type="email" class="input-container" id="email" placeholder="Email*">
+                </fieldset>
+
+                <fieldset class="section">
+                    <div class="menu-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="title">Iranian Tea</td>
+                                    <td class="price">$2.49</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Herbal Tea</td>
+                                    <td class="price">$2.99</td>
+                                </tr>
+                                <!-- Add more drink items here -->
+                                <tr>
+                                    <td class="title">Gaz</td>
+                                    <td class="price">$3.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Sohan</td>
+                                    <td class="price">$3.49</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Baklava</td>
+                                    <td class="price">$4.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Cake yazdi</td>
+                                    <td class="price">$4.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="title"> Nan-e Berenji</td>
+                                    <td class="price">$2.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div>
-                        <span class="inputs-addon">
-                            <i class="fa fa-users" style="color: #898989;"></i>
-                        </span>
-                        <select class="input-container" id="numberOfPeople" style="width: 320px;">
-                            <option value="0">Number of people</option>
-                            <option  value="1">1 persons</option>
-                            <option  value="2">2 persons</option>
-                            <option  value="3">3 persons</option>
-                            <option  value="4">4 persons</option>
-                            <option  value="5">5 persons</option>
-                            <option  value="6">6 persons</option>
-                            <option  value="7">7 persons</option>
-                            <option  value="8">8 persons</option>
-                        </select>
-                    </div>
-                    <div onload="getToday(), generateTime()">
-                        <span class="inputs-addon">
-                            <i class="fa fa-calendar" style="color: #898989;"></i>
-                        </span>
-                        <input type="date" class="input-container" id="date" oninput="generateTime()"/>
-                    </div>
-                    <div>
-                        <span class="inputs-addon">
-                            <i class="fa fa-clock"  style="color: #898989;"></i>
-                        </span>
-                        <select id="time" class="input-container" style="width: 320px;">
-                            <option value="0:0">Time</option> 
-                        </select>
-                    </div>
-                </div>
-                <button id="nextButton" >Next</button>
-            </div>
+                    <button class="button" >Buy</button>
+                </fieldset>
+
+                <fieldset class="section">
+                    <button class="button" >Submit</button>
+                </fieldset>
         </div>
         <footer>
             <div class="social-icons">
