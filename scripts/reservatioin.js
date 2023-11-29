@@ -54,28 +54,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // const nextButton = document.getElementById("nextButton");
-    // nextButton.addEventListener('click', function() {
-    //     firstname = document.getElementById('firstname');
-    //     lastname = document.getElementById('lastname');
-    //     telephone = document.getElementById('telephone');
-    //     email = document.getElementById('email');
-    //     numerOfPeople =document.getElementById('numberOfPeople');
-    //     if (  firstname.value === null ||
-    //         firstname.value === '' ||
-    //         lastname.value === null ||
-    //         lastname.value === '' ||
-    //         email.value === null ||
-    //         email.value === '' ||
-    //         telephone.value === null ||
-    //         telephone.value === '' ||
-    //         numberOfPeople.value === '0'
-    //       ) 
-    //         {
-    //         alert('Please complete all required fields');
-    //         return;
-    //     }
-    // });
+    const prices = document.querySelectorAll(".price")
+    const minusButtons = document.querySelectorAll('.minus');
+    const plusButtons = document.querySelectorAll('.plus');
+    const inputFields = document.querySelectorAll('.numberOrdered');
+
+    minusButtons.forEach((minusButton, index) => {
+        minusButton.addEventListener('click', event => {
+            event.preventDefault();
+            const currentValue = Number(inputFields[index].value) || 0;
+            total =   parseFloat(document.getElementById("totalPrice").textContent);
+            if (currentValue > 0) {
+                inputFields[index].value = currentValue - 1;
+                total = total - parseFloat(prices[index].textContent.slice(1));
+                document.getElementById("totalPrice").textContent = total;
+            }
+        });
+    });
+
+    plusButtons.forEach((plusButton, index) => {
+        plusButton.addEventListener('click', event => {
+            event.preventDefault();
+            const currentValue = Number(inputFields[index].value) || 0;
+            total =   parseFloat(document.getElementById("totalPrice").textContent);
+            if (currentValue < 10){
+                inputFields[index].value = currentValue + 1;
+                total = total + parseFloat(prices[index].textContent.slice(1));
+                document.getElementById("totalPrice").textContent = total;
+            }
+        });
+    });
+    
 });
 
 
@@ -108,18 +117,12 @@ $(document).ready(function(){
         }
         else{
             currentSection.removeClass("is-active").next().addClass("is-active");  
-            $("#menuContainer").load("menu.html #main-menu-id");       
         }
+      }else {
+            currentSection.removeClass("is-active").next().addClass("is-active");  
       }
 
-      if(currentSectionIndex === 2){
 
-      }
-  
-      if(currentSectionIndex === 3){
-        $(document).find(".box .section").first().addClass("is-active");
-        $(document).find(".steps li").first().addClass("is-active");
-      }
+
     });
   });
-
