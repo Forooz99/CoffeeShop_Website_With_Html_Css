@@ -21,7 +21,7 @@ nav {
 }
 
 nav a {
-    color: black;
+    color: rgb(27, 11, 4);
     text-align: center;
     padding-top: 45px;
     padding-bottom: 0px;
@@ -32,7 +32,7 @@ nav a {
 }
 
 nav a:hover {
-    color: black;
+    color: wheat;
 }
 
 nav img {  
@@ -64,5 +64,5 @@ footer {
 }
 
 .social:hover {
-    color: #49260a;
+    color: rgb(92, 62, 50);
 }

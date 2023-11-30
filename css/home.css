@@ -11,8 +11,10 @@ main {
 
 h1 {
     font-size: 50px;
+    color: rgb(70, 39, 26);
 }
 
 .font_size {
     font-size: 25px;
+    color: rgb(27, 11, 4);
 }
