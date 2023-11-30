@@ -1,0 +1,168 @@
+main {
+    background-color: rgba(142, 112, 77, 0.9);
+    margin-top: 300px;
+    margin-bottom: 200px;
+    margin-left: 750px;
+    /* padding-top: 50px;
+    padding-bottom: 200px;
+    padding-right: 100px;
+    padding-left: 1000px; */
+}
+
+.box {
+    position: relative;
+    align-content: center;
+    font-family: sspReg;
+    padding: 10px;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    height: 400px;
+    overflow:hidden;
+}
+
+.inputs {
+    align-content: center;
+}
+
+.box .menu-table {
+    width: 300px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+.box .menu-table table {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;    
+}
+
+.box .menu-table th,
+.box .menu-table td {
+    padding: 10px;
+}
+
+.box .menu-table td.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.input-container {
+    font-family: sspReg;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 0%;
+    padding: 10px;
+    width: 300px;
+    margin: 5px;
+    margin-left: 0%;
+    vertical-align: middle;
+}
+
+#lastname {
+    width: 138px;
+    margin-right: 0;
+}
+
+#firstname {
+    width: 138px;
+    border-radius : 0; 
+    margin-right: 0%;
+}
+
+.inputs-addon {
+    font-family: sspReg;
+    background-color: #e2e0e0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    padding: 8.5px;
+    margin: 5px;
+    margin-right: 0%;
+    vertical-align: middle;
+}
+
+.inputs-addon i {
+    width: 12px;
+    height: 12px;
+}
+
+.ordering-container {
+    display: flex;
+}
+
+.numberOrdered {
+    width: 30px;
+}
+
+.title {
+    font-family: sspBold;
+    margin-bottom: 10px;
+}
+
+.button {
+    position:relative;
+    margin-top: 30px;
+    left: 250px;
+    bottom: 20px;
+    font-family: sspReg;
+    background-color: #b7b5b5;
+    border: 1px solid #989797;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100px;
+}
+
+.button:hover {
+    background-color: #a3a2a2;
+}
+
+.box .section{
+    position :absolute;
+    top: 30px;
+    bottom: 10px;
+    left: 5px;
+    right: 5px;
+    border: none;
+    opacity: 0;
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -ms-transform-origin: top center;
+    -o-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+  }
+
+.box .section.is-active{
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+
+@font-face {
+    font-family: sspReg;
+    src: url(fonts/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: sspBold;
+    src: url(fonts/SourceSansPro-Bold.otf);
+}

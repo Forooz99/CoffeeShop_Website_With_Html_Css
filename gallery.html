@@ -5,31 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts/script.js"></script>
+  <link rel="stylesheet" href="gallery.css">
+  <script src="scripts/gallery.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="navbar"  style="background-color:rgb(231, 208, 198)">
-        <a href="home.html">Home</a>
-        <a href="menu.html">Menu</a>
+    <nav>
+        <a href="home.html" class="navLink">Home</a>
+        <a href="menu.html" class="navLink">Menu</a>
         <img src="pics/logo.png" alt="coffeeshop-logo">
-        <a href="gallery.html">Gallery</a>
-        <a href="reservation.html">Reservation</a>
-    </div>
-    <div id="gallery" class="slider">
-        <img class="mySlides" src="pics/pic1.jpg" style="width:70%">
-        <img class="mySlides" src="pics/pic2.jpg" style="width:70%">
-        <img class="mySlides" src="pics/pic3.jpg" style="width:70%">
-        <button onclick="plusDivs(-1)">&#10094;</button>
-        <button onclick="plusDivs(1)">&#10095;</button>
-    </div>
-  <footer>
-    <div class="social-icons">
-        <a href="https://www.google.com/" class="fa fa-facebook social"></a>
-        <a href="https://www.google.com/" class="fa fa-instagram social"></a>
-        <a href="https://www.google.com/" class="fa fa-telegram social"></a>
-    </div>
-    <p>&copy; 2023 Coffee Shop</p>
-</footer>
+        <a href="gallery.html" class="navLink">Gallery</a>
+        <a href="reservation.html" class="navLink">Reservation</a>
+    </nav>
+
+    <main>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="pics/g1.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="pics/g2.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="pics/g3.jpg" style="width:100%">
+        </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Coffee Shop
+        <div class="social-icons">
+            <a href="https://www.google.com/" class="fa fa-facebook social"></a>
+            <a href="https://www.google.com/" class="fa fa-instagram social"></a>
+            <a href="https://www.google.com/" class="fa fa-telegram social"></a>
+        </div>
+    </footer>
 </body>
 </html>

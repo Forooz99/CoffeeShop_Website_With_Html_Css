@@ -5,19 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Reservation</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="reservation.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="scripts/reservatioin.js"></script>
+        <script src="scripts/reservation.js"></script>
     </head>
     <body>
-        <div class="main-container" id="reservation" >
-            <div class="navbar">
-                <a href="home.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <img src="pics/logo.png" alt="coffeeshop-logo">
-                <a href="gallery.html">Gallery</a>
-                <a href="reservation.html">Reservation</a>
-            </div>
+        <nav>
+            <a href="home.html" class="navLink">Home</a>
+            <a href="menu.html" class="navLink">Menu</a>
+            <img src="pics/logo.png" alt="coffeeshop-logo">
+            <a href="gallery.html" class="navLink">Gallery</a>
+            <a href="reservation.html" class="navLink">Reservation</a>
+        </nav>
+
+        <main>
             <div class="box">
                 <div style="text-align: center;" class="title">Table Reservation</div>    
                 <fieldset class="section is-active">
@@ -76,7 +78,7 @@
                     <button class="button" >Next</button>
                     </div>
                 </fieldset>
-
+    
                 <fieldset class="section">
                     <div class="menu-table">
                         <table>
@@ -151,14 +153,16 @@
                     <p>Total Price: <span id="totalPrice">0</span></p>
                     <button class="button" >Add to Cart</button>
                 </fieldset>
-        </div>
+            </div>
+        </main>
+        
         <footer>
+            &copy; 2023 Coffee Shop
             <div class="social-icons">
                 <a href="https://www.google.com/" class="fa fa-facebook social"></a>
                 <a href="https://www.google.com/" class="fa fa-instagram social"></a>
                 <a href="https://www.google.com/" class="fa fa-telegram social"></a>
             </div>
-            <p>&copy; 2023 Coffee Shop</p>
         </footer>
     </body>
 </html>
