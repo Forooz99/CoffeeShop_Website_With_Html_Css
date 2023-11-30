@@ -4,7 +4,7 @@ main {
     background-color: rgba(142, 112, 77, 0.8);
     margin: 180px 200px;
     padding-top: 50px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     padding-right: 100px;
     padding-left: 100px;
 }
@@ -15,6 +15,17 @@ h1 {
 }
 
 .font_size {
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(27, 11, 4);
+}
+
+a {
+    color: rgb(27, 11, 4);
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+a:hover {
+    color: wheat;
 }
