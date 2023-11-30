@@ -1,15 +1,14 @@
 main {
     background-color: rgba(142, 112, 77, 0.9);
-    margin-top: 300px;
+    margin-top: 200px;
     margin-bottom: 200px;
 }
 
 .box {
     position: relative;
     align-content: center;
-    font-family: sspReg;
     padding: 10px;
-    width: 400px;
+    width: 500px;
     margin: 0 auto;
     margin-bottom: 30px;
     border-radius: 6px;
@@ -22,7 +21,7 @@ main {
 }
 
 .box .menu-table {
-    width: 300px;
+    width: 450px;
     margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
@@ -37,43 +36,43 @@ main {
 
 .box .menu-table th,
 .box .menu-table td {
+    font-size: 20px;
     padding: 10px;
 }
 
 .box .menu-table td.title {
-    font-size: 16px;
     font-weight: bold;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 .input-container {
-    font-family: sspReg;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 4px;
     border-bottom-left-radius: 0%;
     border-top-left-radius: 0%;
     padding: 10px;
-    width: 300px;
+    width: 385px;
     margin: 5px;
     margin-left: 0%;
     vertical-align: middle;
+    font-size: 18px;
 }
 
 #lastname {
-    width: 138px;
+    width: 180px;
     margin-right: 0;
 }
 
 #firstname {
-    width: 138px;
+    width: 180px;
     border-radius : 0; 
     margin-right: 0%;
 }
 
 .inputs-addon {
-    font-family: sspReg;
+    font-size: 21px;
     background-color: #e2e0e0;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -99,21 +98,22 @@ main {
 }
 
 .title {
-    font-family: sspBold;
     margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .button {
+    font-size: 15px;
     position:relative;
     margin-top: 30px;
-    left: 250px;
+    left: 300px;
     bottom: 20px;
-    font-family: sspReg;
     background-color: #b7b5b5;
     border: 1px solid #989797;
     border-radius: 4px;
     padding: 10px;
-    width: 100px;
+    width: 150px;
 }
 
 .button:hover {
@@ -150,14 +150,3 @@ main {
     -o-transform: scale(1, 1);
     transform: scale(1, 1);
   }
-
-
-@font-face {
-    font-family: sspReg;
-    src: url(fonts/SourceSansPro-Regular.otf);
-}
-
-@font-face {
-    font-family: sspBold;
-    src: url(fonts/SourceSansPro-Bold.otf);
-}
