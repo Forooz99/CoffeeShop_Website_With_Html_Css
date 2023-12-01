@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentValue > 0) {
                 inputFields[index].value = currentValue - 1;
                 total = total - parseFloat(prices[index].textContent.slice(1));
+                total = total.toFixed(2);
                 document.getElementById("totalPrice").textContent = total;
             }
         });
@@ -76,12 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
         plusButton.addEventListener('click', event => {
             event.preventDefault();
             const currentValue = Number(inputFields[index].value) || 0;
-            total =   parseFloat(document.getElementById("totalPrice").textContent);
+            total =   parseFloat(document.getElementById("totalPrice").textContent)
             if (currentValue < 10){
                 inputFields[index].value = currentValue + 1;
                 total = total + parseFloat(prices[index].textContent.slice(1));
+                total = total.toFixed(2);
                 document.getElementById("totalPrice").textContent = total;
-            }
+            } 
         });
     });
     
