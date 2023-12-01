@@ -1,11 +1,9 @@
 main {
     background-color: rgba(142, 112, 77, 0.8);
-    margin: 180px 200px;
+    margin: 160px 200px;
 }
 
 .container {
-    margin-left: 145px;
-    margin-right: 145px;
     align-items: center;
 }
 
@@ -35,7 +33,7 @@ main {
 }
 
 .menu-table td:hover {
-    color: #b7861c;
+    color: wheat;
 }
 
 .menu-table th {
@@ -52,14 +50,14 @@ main {
 }
 
 .menu-table td.description {
-    font-size: 14px;
+    font-size: 20px;
     color: black;
 }
 
 .menu-table td.price {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: rgb(27, 11, 4);
 }
 
 .menu-table .picture {
@@ -70,4 +68,8 @@ main {
 .menu-table img {
     max-width: 150px;
     max-height: 150px;
+}
+
+h2 {
+    color: rgb(27, 11, 4);
 }
